@@ -1,0 +1,128 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #111;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  line-height: 1.4;
+  background-color: #edf0f2;
+}
+
+.section-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.section-row {
+  display: table-row;
+}
+
+.section-cell {
+  display: table-cell;
+}
+
+.masterpiece-container {
+  height: 100%;
+}
+
+.masterpiece {
+  padding: 16px;
+  text-align: center;
+  vertical-align: middle;
+  /* Full shadow around each letter */
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+.masterpiece-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 16px 0;
+  color: #f20;
+  font-size: 4em;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: lowercase;
+  border-bottom: 1px dashed #aaa;
+}
+
+/* Create a subtle double layered border effect to give some depth */
+.masterpiece-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  display: block;
+  border-bottom: 1px dashed #fff;
+}
+
+.masterpiece-title span {
+  display: block;
+  color: #111;
+}
+
+.masterpiece-links {
+  margin: 0.5em 0;
+  font-size: 1.8em;
+}
+
+.masterpiece-link {
+  display: block;
+  margin-bottom: 4px;
+  text-transform: lowercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.masterpiece-link:hover {
+  color: #f20;
+}
+
+.masterpiece-link:before,
+.masterpiece-link:after {
+  content: "{";
+  color: #111;
+  opacity: 0;
+  padding: 0 1px;
+}
+
+.masterpiece-link:after {
+  content: "}";
+}
+
+.masterpiece-link:hover:after,
+.masterpiece-link:hover:before {
+  opacity: 1;
+}
+
+@media (min-width: 30em) {
+  .masterpiece-link,
+  .masterpiece-title span {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 38em) {
+  .masterpiece {
+    font-size: 120%;
+  }
+}
+
+@media (min-width: 42em) {
+  .masterpiece {
+    font-size: 140%;
+  }
+}
+
+@media (min-width: 44em) {
+  .masterpiece {
+    font-size: 150%;
+  }
+}
